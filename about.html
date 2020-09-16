@@ -9,14 +9,19 @@
     </head>
     <body>
         
-        <header>
-            <div class="container">
-                <img class="logo logo-background" src="/images/logo.png" />
-                <ul class="nav-links">
-                    <li class="nav-link"><a href="/index.html">home</a></li>
-                    <li class="nav-link"><a href="#">about us</a></li>
-                    <li class="nav-link"><a href="/contact.html">contact</a></li>
-                </ul>
+        <header class="header">
+            <div class="header-content">
+                <a class="logo-link" href="index.html">
+                    <img src="images/logo.png" alt="" class="logo">
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link nav-link-active">about us</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
@@ -27,7 +32,7 @@
             </div>
         </div>
         
-        <section>
+        <main>
             <div class="container">
                 <div class="section-image">
                     <img src="/images/about-me.jpg" alt="" />
@@ -43,23 +48,19 @@
                     <p class="section-text">So sure, maybe we're a bit different from what you'd expect, but if you want to rank, market, and build your way to the top, we're the brothers for you.</p>
                 </div>
             </div>
-        </section>
+        </main>
         
         <footer>
-            <div class="container">
-                <div>
-                    <img class="logo" src="/images/logo.png" />
-                    <p class="footer-text">Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO, SEM, and Content Marketing needs.</p>
-                </div>
-                <div class="footer-social-media">
-                    <i class="footer-social-media-icon">i</i>
-                    <i class="footer-social-media-icon">t</i>
-                    <i class="footer-social-media-icon">f</i>
-                </div>
+            <div class="footer-main">
+                <img class="logo" src="/images/logo.png" />
+                <p class="footer-text">Two brothers from Chicago that are just trying to pay back their debt by helping others with their SEO, SEM, and Content Marketing needs.</p>
                 <p class="footer-copyright">© Jake&Elwood 2019</p>
             </div>
+            <ul class="social-list">
+                <li class="social-item"><a href="#" class="social-link"></a>f</li>
+                <li class="social-item"><a href="#" class="social-link"></a>t</li>
+                <li class="social-item"><a href="#" class="social-link"></a>i</li>
+            </ul>
         </footer>
-        
-    </body>
     </body>
 </html>
