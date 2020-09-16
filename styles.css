@@ -9,23 +9,29 @@ body {
     line-height: 1.5;
 }
 
-h1,
-h2,
-span {
-    font-weight: 700;
+img {
+    max-width: 100%;
+    display: block;
 }
-
 
 ul {
     list-style: none;
     padding: 0;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+
+
+    /* TYPOGRAPHY */
+
+h1,
+h2,
+span {
+    font-weight: 700;
 }
 
+.accent-color {
+    color: #FFE600;
+}
 
 .hero-title {
     font-size: 1.5rem;
@@ -33,23 +39,20 @@ img {
     margin: 0;
 }
 
-.accent-color {
-    color: #FFE600;
-}
 
-p {
+.info-title {
     font-size: 1.125rem;
-}
-
-a {
-    color: unset;
-    text-decoration: none;
+    color: black;
 }
 
 .nav-links,
 .hero-link {
     font-size: 0.875rem;
 }
+
+
+
+    /* BUTTONS */
 
 .btn {
     font-weight: 700;
@@ -62,9 +65,19 @@ a {
     color: black;
 }
 
-.hero {
+
+
+    /* GENERAL LAYOUT */
+
+.main-grid {
     display: grid;
     grid-template-columns: minmax(1em, 1fr) minmax(260px, 800px) minmax(1em, 1fr);
+}
+
+
+    /* HERO */
+
+.hero {
     background: black;
     background-image: url(/images/hero-bg.jpg);
     background-position: center;
@@ -74,16 +87,18 @@ a {
     padding: 4em 0;
 }
 
-.header-content,
-.info,
-footer {
-    display: grid;
-    grid-template-columns: minmax(1em, 1fr) minmax(260px, 800px) minmax(1em, 1fr);
+.hero > *{
+    grid-column: 2 / -2;
 }
 
-.hero > *,
-.header-content > *,
-.info > *,
-footer > * {
+
+    /* INFO */
+
+.info {
+    padding: 4em 0;
+}
+
+.info-item {
     grid-column: 2 / -2;
+    text-align: center;
 }
