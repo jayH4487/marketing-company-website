@@ -84,6 +84,137 @@ span {
     
 }
 
+.header {
+    background: black;
+}
+
+.header-home {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.header-content {
+    grid-column: 2 / -2;
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    background: #FFE600;
+    padding-top: 2em;
+}
+
+.nav {
+    position: fixed;
+    background: black;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 1000;
+    transition: all 0.5s ease-out;
+}
+
+.open-nav {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: auto;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: absolute;
+    background: white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 2px;
+    width: 40px;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    height: 2px;
+    width: 40px;
+}
+
+.hamburger:before {
+    transform: translateY(-8px);
+}
+
+.hamburger:after {
+    transform: translateY(8px);
+}
+
+.close-nav {
+    border: none;
+    background: none;
+    color: #FFE600;
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5em;
+    position: absolute;
+    right: 20px;
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #FFE600;
+}
+
+@media (min-width: 600px) {
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+
+    .nav {
+        position: unset;
+        background: transparent;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 2em;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+
 .footer {
     background: #EBEBEB;
     padding: 4em 0;
@@ -153,14 +284,19 @@ span {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    padding: 4em 0;
+    padding: 8em 0 4em;
 }
 
 .hero > * {
     grid-column: 2 / -2;
+    margin-right: 20%;
 }
 
 @media (min-width: 600px) {
+    .hero {
+        padding: 10em 0 6em;
+    }
+
     .hero > * {
         grid-column: 2 / span 2;
     }
