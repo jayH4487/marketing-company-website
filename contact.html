@@ -10,17 +10,28 @@
     </head>
     <body>
         
-        <header class="header">
+        <header class="header main-grid">
             <div class="header-content">
                 <a class="logo-link" href="index.html">
                     <img src="images/logo.png" alt="" class="logo">
                 </a>
+
+                <button aria-label="open navigation" class="open-nav">
+                    <span class="hamburger"></span>
+                </button>
                 
                 <nav class="nav">
+                    <button aria-label="close navigation" class="close-nav">&times;</button>
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">about us</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link nav-link-active">contact</a></li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link nav-link-active">contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -28,29 +39,36 @@
 
         <div class="header-secondary">
             <div class="container">
-                <h1 class="header-secondary-title">Contact.</h1>
-                <p class="header-secondary-text">Let us know how we can help you need and we’ll drive over to your place in our Bluesmobile the following day to discuss the deal.</p>      
             </div>
         </div>
         
-        <main>
-            <div class="container">
-                <div class="section-image">
-                    <img src="/images/contact.jpg" alt="" />
-                </div>
-                <form>
-                    <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" />
-                    <label for="email">Email</label>
-                    <input type="email" name="email" />
-                    <label for="message">Message</label>
-                    <textarea></textarea>
-                    <button>send</button>
+        <main class="main-grid main-template">
+            
+            <h1 class="page-title">Contact.</h1>
+            <p class="page-subtitle">Let us know how we can help you need and we’ll drive over to your place in our Bluesmobile the following day to discuss the deal.</p>      
+ 
+            <img class="page-image" src="/images/contact.jpg" alt="" />
+            
+            <div class="section-item">
+                <h2 class="section-title">Getting in touch with us</h2>
+                <p class="section-text">You can either use the form or send us an email. I'll get back in touch with you as soon as possible!</p>
+            </div>
+            
+            <div class="main-text">
+                <form class="contact-form">
+    
+                    <label class="first-name-label" for="first-name">First Name</label>
+                    <input class="first-name-input" type="text" id="first-name" />
+
+                    <label class="email-label" for="email">Email</label>
+                    <input class="email-input" type="email" id="email" />
+                
+                    <label class="message-label" for="message">Message</label>
+                    <textarea class="message-textarea" id="message"></textarea>
+
+                    <button class="btn btn-primary btn-form">send</button>
+    
                 </form>
-                <div class="section-item">
-                    <h2 class="section-title">Getting in touch with us</h2>
-                    <p class="section-text">You can either use the form or send us an email. I'll get back in touch with you as soon as possible!</p>
-                </div>
             </div>
         </main>
         
@@ -78,6 +96,8 @@
                 </li>
             </ul>
         </footer>
-        
+
+        <script src="index.js"></script>
+
     </body>
 </html>

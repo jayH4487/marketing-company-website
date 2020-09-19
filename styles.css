@@ -106,14 +106,26 @@ span {
     /* BUTTONS */
 
 .btn {
+    border: none;
     font-weight: 700;
     justify-self: start;
-    padding: 0.75em 1.875em;
+    padding: 0.75em 2em;
+    margin-top: 0.5em;
 }
 
 .btn-primary {
     background: #FFE600;
     color: black;
+}
+
+.btn-form {
+    justify-self: end;
+}
+
+.btn:focus,
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.75;
 }
 
 
@@ -398,10 +410,10 @@ span {
 @media (min-width: 750px) {
     .main-grid {
         grid-template-areas: 
-        ". title    title    title    ."
-        ". subtitle subtitle subtitle ."
-        ". image    main     main     ."
-        ". .        main     main     .";
+        ". title        title    title    ."
+        ". subtitle     subtitle subtitle ."
+        ". image        main     main     ."
+        ". section-item main     main     .";
     }
 
     .page-title {
@@ -427,5 +439,70 @@ span {
 
     .main-text {
         grid-area: main;
+    }
+
+    .section-item {
+        grid-area: section-item;
+    }
+}
+
+
+    /* FORM */
+
+.contact-form {
+    display: grid;
+}
+
+label {
+    font-weight: 700;
+    color: black;
+}
+
+input,
+textarea {
+    margin-bottom: 1em;
+    padding: 0.75em;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+@media (min-width: 750px) {
+    .contact-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .first-name-label {
+        grid-row: 1;
+    }
+    
+    .email-label {
+        grid-row: 1;
+    }
+    
+    .first-name-input {
+        grid-row: 2;
+    }
+    
+    .email-input {
+        grid-row: 2;
+    }
+    
+    .message-label {
+        grid-row: 3;
+    }
+    
+    .message-textarea {
+        grid-row: 4;
+        grid-column: span 2;
+    }
+    
+    .btn-form {
+        grid-row: 5;
+        grid-column: span 2;
     }
 }
