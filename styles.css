@@ -355,7 +355,7 @@ span {
 
 .hero > * {
     grid-column: 2 / -2;
-    margin-right: 20%;
+    margin-right: 30%;
 }
 
 @media (min-width: 750px) {
@@ -365,6 +365,7 @@ span {
 
     .hero > * {
         grid-column: 2 / span 2;
+        margin-right: 10%;
     }
 }
 
@@ -473,21 +474,15 @@ textarea {
 @media (min-width: 750px) {
     .contact-form {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        column-gap: 10px;
     }
 
-    .first-name-label {
-        grid-row: 1;
-    }
-    
+    .first-name-label,
     .email-label {
         grid-row: 1;
     }
     
-    .first-name-input {
-        grid-row: 2;
-    }
-    
+    .first-name-input,
     .email-input {
         grid-row: 2;
     }
