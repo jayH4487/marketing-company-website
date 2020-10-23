@@ -345,7 +345,7 @@ span {
 
 .hero {
     background: black;
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(./images/hero-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
